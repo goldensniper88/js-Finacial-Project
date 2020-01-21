@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Financial</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/nouislider.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/rangeslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="grey_background">
+        <div class="section_1">
+            <div class="title">How Much Will it Cost You?
+                <p>See for yourself how financing your halal home with Manzil compares to other lenders.</p>
+            </div>
+            <div class="input_value">
+                <div class="slider_control">
+                    <div class="slider_title">Purchase Price</div>
+                    <div class="slider_value price_value">$500,000</div>
+                    <input type="text" name="currency-field" id="purchase-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency">
+                    <div id="slider_price_range"></div>
+                </div>
+                <div class="slider_control">
+                    <div class="slider_title">Down Payment</div>
+                    <div class="slider_value payment_value">$100,000</div>
+                    <input type="text" name="currency-field" id="down-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency">
+                    <div id="slider_payment_range"></div>
+                </div>
+                <div class="slider_control">
+                    <div class="slider_title">Term</div>
+                    <div class="slider_value term_value">25 Years</div>
+                    <div id="slider_term_range"></div>
+                </div>
+                <div class="slider_control">
+                    <div class="slider_title">Payment Frequency</div>
+                    <div class="slider_value payment_frequency">Monthly</div>
+                    <div id="slider_payment_frequency"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="details">
+                <div class="details_value">
+                    <div class="details_unit">
+                        <div class="vertical_line-1"></div>
+                        <div class="values">
+                            <p>Manzil <span class="manzil_rate">(5.49%)</span><span><i class="fa fa-info-circle"></i></span></p>
+                            <p class="manzil_financing">$734,658</p>
+                            <div class="left manzil_payment">$2,422</div><div class="right payment_type_label">(Monthly Payment)</div>
+                        </div>
+                    </div>
+                    <div class="details_unit">
+                        <div class="vertical_line-2"></div>
+                        <div class="values">
+                            <p>Traditional Lender <span class="traditional_rate">(8.50%)</span><span><i class="fa fa-info-circle"></i></span></p>
+                            <p class="traditional_financing">$954,436</p>
+                            <div class="left traditional_payment">$3,181</div><div class="right payment_type_label">(Monthly Payment)</div>
+                        </div>
+                    </div>
+                    <div class="details_unit">
+                        <div class="vertical_line-3"></div>
+                        <div class="values">
+                            <p>Private Lender <span class="private_rate">(9.99%)</span><span><i class="fa fa-info-circle"></i></span></p>
+                            <p class="private_financing">$1,072,577</p>
+                            <div class="left private_payment">$3,575</div><div class="right payment_type_label">(Monthly Payment)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details_image">
+                    <img src="assets/img/banner.png">
+                </div>
+            </div>
+            <p>As you see above, If we’re looking at an <b>“Apples to Apples”</b> comparison, it is in fact cheaper to finance your home with Manzil.</p>
+        </div>
+    </div>
+    <div class="section_2">
+        <div class="title">How much Halal Money<br>Can You Make?</div>
+        <div class="input_value">
+            <div class="slider_control">
+                <div class="slider_title">Initial deposit</div>
+                <div class="slider_value initial_value">$50,000</div>
+                <input type="text" name="currency-field" id="initial-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency">
+                <div id="slider_initial_range"></div>
+            </div>
+            <div class="slider_control">
+                <div class="slider_title">Monthly deposit</div>
+                <div class="slider_value monthly_value">$1,000</div>
+                <input type="text" name="currency-field" id="monthly-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency">
+                <div id="slider_monthly_range"></div>
+            </div>
+<!--            <div class="vertical_line"></div>-->
+<!--            <div class="slider_control non_slider">-->
+<!--                <p>Years</p>-->
+<!--                <p><b>30</b></p>-->
+<!--            </div>-->
+        </div>
+        <div class="line"></div>
+        <div class="details">
+            <div class="details_value">
+                <div class="details_unit">
+                    <div class="shape1"></div>
+                    <div class="values">
+                        <p>Manzil Halal Investing<span><i class="fa fa-info-circle"></i></span></p>
+                        <p class="manzil_investing">$862,038</p>
+                    </div>
+                </div>
+                <div class="details_unit">
+                    <div class="shape2"></div>
+                    <div class="values">
+                        <p class="thin">Traditional Savings<span><i class="fa fa-info-circle"></i></span></p>
+                        <p class="traditional_savings">$648,393</p>
+                    </div>
+                </div>
+                <div class="details_unit">
+                    <div class="shape3"></div>
+                    <div class="values">
+                        <p class="thin">Traditional Investing<span><i class="fa fa-info-circle"></i></span></p>
+                        <p class="traditional_investing">$513,387</p>
+                    </div>
+                </div>
+            </div>
+            <div id="myChart" class="chart--container">
+                <a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/js/rangeslider.min.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script src="assets/js/nouislider.min.js"></script>
+<script>
+
+
+    function formatDollar(num) {
+        var p = num.toFixed(2).split(".");
+        return "$" + p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+            return  num=="-" ? acc : num + (i && !(i % 3) ? "," : "") + acc;
+        }, "");
+    }
+
+    function formatDollarFloat(num) {
+        num = Number(num);
+        var p = num.toFixed(2).split(".");
+        return "$" + p[0].split("").reverse().reduce(function(acc, num, i, orig) {
+            return  num=="-" ? acc : num + (i && !(i % 3) ? "," : "") + acc;
+        }, "") + "." + p[1];
+    }
+
+    function formatPercent(num){
+        return parseFloat(Math.round(num * 10000) / 100).toFixed(2) +"%";
+    }
+
+    function FV(rate, nper, pmt, pv, type) {
+        var pow = Math.pow(1 + rate, nper),
+            fv;
+        if (rate) {
+            fv = (pmt*(1+rate*type)*(1-pow)/rate)-pv*pow;
+        } else {
+            fv = -1 * (pv + pmt * nper);
+        }
+        return fv.toFixed(0);
+    }
+
+    var dataTable = [
+        {"term": 1, "manzil": 3.49, "traditional": 4.50, "private": 9.99},
+        {"term": 2, "manzil": 3.49, "traditional": 4.50, "private": 9.99},
+        {"term": 3, "manzil": 3.49, "traditional": 5.15, "private": 9.99},
+        {"term": 4, "manzil": 3.49, "traditional": 5.15, "private": 9.99},
+        {"term": 5, "manzil": 3.49, "traditional": 5.75, "private": 9.99},
+        {"term": 6, "manzil": 3.59, "traditional": 5.75, "private": 9.99},
+        {"term": 7, "manzil": 3.69, "traditional": 5.75, "private": 9.99},
+        {"term": 8, "manzil": 3.79, "traditional": 5.75, "private": 9.99},
+        {"term": 9, "manzil": 3.89, "traditional": 5.75, "private": 9.99},
+        {"term": 10, "manzil": 3.99, "traditional": 5.75, "private": 9.99},
+        {"term": 11, "manzil": 4.09, "traditional": 5.75, "private": 9.99},
+        {"term": 12, "manzil": 4.19, "traditional": 5.75, "private": 9.99},
+        {"term": 13, "manzil": 4.29, "traditional": 5.75, "private": 9.99},
+        {"term": 14, "manzil": 4.39, "traditional": 5.75, "private": 9.99},
+        {"term": 15, "manzil": 4.49, "traditional": 5.75, "private": 9.99},
+        {"term": 16, "manzil": 4.59, "traditional": 5.75, "private": 9.99},
+        {"term": 17, "manzil": 4.69, "traditional": 5.75, "private": 9.99},
+        {"term": 18, "manzil": 4.79, "traditional": 8.50, "private": 9.99},
+        {"term": 19, "manzil": 4.89, "traditional": 8.50, "private": 9.99},
+        {"term": 20, "manzil": 4.99, "traditional": 8.50, "private": 9.99},
+        {"term": 21, "manzil": 5.09, "traditional": 8.50, "private": 9.99},
+        {"term": 22, "manzil": 5.19, "traditional": 8.50, "private": 9.99},
+        {"term": 23, "manzil": 5.29, "traditional": 8.50, "private": 9.99},
+        {"term": 24, "manzil": 5.39, "traditional": 8.50, "private": 9.99},
+        {"term": 25, "manzil": 5.49, "traditional": 8.50, "private": 9.99},
+    ];
+
+    var periodsTable = [
+        {"type": "Monthly", "periods": 12},
+        {"type": "Semi-Monthly", "periods": 24},
+        {"type": "Bi-Weekly", "periods": 26},
+        {"type": "Weekly", "periods": 52},
+    ];
+
+    var price_value = 500000;
+    var payment_value = 100000;
+    var term_value = 25;
+    var payment_type = "Monthly";
+
+
+    var manzil_investing = 0.04;
+    var traditional_investing = 0.0129;
+    var traditional_saving = 0.0255;
+
+    var initial_deposit = 50000;
+    var monthly_deposit = 1000;
+    var deposit_per_year = 12;
+    var years = 30;
+
+    var year_values = [];
+
+    for( var i = 0; i < 30; i++ ){
+        var value;
+        if( i == 0 ){
+            value = "Today";
+        }
+        else{
+            value = "Year " + (i+1);
+        }
+        for( var j = 0; j < 12; j++ ){
+            year_values.push( value );
+        }
+    }
+
+    function getInvestingTable(){
+
+        investing_table = [];
+
+        for( var i = 0; i < 360; i++ ){
+            var obj = new Object;
+            obj.period = i+1;
+            obj.manzil = FV( manzil_investing/deposit_per_year, i+1, (-1)*monthly_deposit, (-1)*initial_deposit, 1);
+            obj.investing = FV( traditional_investing/deposit_per_year, i+1, (-1)*monthly_deposit, (-1)*initial_deposit, 1);
+            obj.saving = FV( traditional_saving/deposit_per_year, i+1, (-1)*monthly_deposit, (-1)*initial_deposit, 1);
+            investing_table.push(obj);
+        }
+
+        return investing_table;
+    }
+
+    var manzilData = [];
+    var investingData = [];
+    var savingData = [];
+
+    function drawGraph(){
+
+        manzilData = [];
+        investingData = [];
+        savingData = [];
+
+        var list = getInvestingTable();
+
+        for( var i=0; i<list.length; i+=1 ){
+            var total_manzil = 0;
+            var total_investing = 0;
+            var total_saving = 0;
+            for( var j=0; j<1; j++ ){
+                total_manzil += Number(list[i+j].manzil);
+                total_investing += Number(list[i+j].investing);
+                total_saving += Number(list[i+j].saving);
+            }
+            manzilData.push( total_manzil / 1 * 1.1 );
+            savingData.push( total_saving / 1 * 1.05 );
+            investingData.push( total_investing / 1 );
+
+            total_manzil = 0;
+            total_investing = 0;
+            total_saving = 0;
+        }
+
+        let chartConfig = {
+            type: 'area',
+            globals: {
+                fontFamily: 'Helvetica',
+                shadow: false
+            },
+            backgroundColor: '#fff',
+            // plotarea:{
+            //     "margin":"0 0"
+            // },
+            plot: {
+                alphaArea: 1,
+                // animation: {
+                //     delay: 0,
+                //     effect: 'ANIMATION_SLIDE_LEFT',
+                //     method: 'ANIMATION_LINEAR',
+                //     sequence: 'ANIMATION_BY_PLOT',
+                //     speed: 1000
+                // },
+                aspect: 'spline',
+                contourOnTop: false,
+                lineWidth: '0px',
+                marker: {
+                    visible: false
+                },
+            },
+            scaleX:{
+                values: year_values,
+                lineWidth: '0px',
+                lineColor:'none',
+                tick:{
+                    visible:false
+                },
+                guide:{
+                    visible:false
+                },
+                item:{
+                    fontColor: 'gray',
+                    fontSize: '14px',
+                    visible: true,
+                    width: 500
+                },
+                visible: true
+            },
+            scaleY: {
+                lineWidth: '0px',
+                lineColor:'none',
+                tick:{
+                    visible:false
+                },
+                guide:{
+                    visible:false
+                },
+                item:{
+                    visible:false
+                }
+            },
+            crosshairX: {
+                plotLabel: {
+                    backgroundColor: '#434343',
+                    fontColor: '#FFF',
+                    alpha: 0
+                },
+
+                scaleLabel: {
+                    backgroundColor: '#fff',
+                    fontColor: 'gray',
+                    fontSize: '14px'
+                },
+                marker:{
+                    "type":"circle",
+                    "size":7, //Make sure to specify size.
+                    "background-color":"#fff",
+                    "border-color": "#A9A59E",
+                    "border-width": "0.5px",
+                },
+                lineWidth: 1,
+            },
+            tooltip: {
+                visible: false
+            },
+            gui: {
+                contextMenu: {
+                    empty: true,
+                    button: {
+                        visible:false
+                    }
+                }
+            },
+            series: [
+                {
+                    text: 'Manzil Halal Investing',
+                    values: manzilData,
+                    backgroundColor: '#EAB56E',
+                    "gradient-colors": '#F9F8F6 #EAB56E',
+                    "gradient-stops": '0.1 0.6',
+                    "fill-angle": 0,
+                    lineColor: '#d7b877'
+                },
+                {
+                    text: 'Traditional Savings',
+                    values: savingData,
+                    backgroundColor1: '#F0D09B',
+                    "gradient-colors": '#F9F8F6 #F0D09B',
+                    "gradient-stops": '0.1 0.6',
+                    "fill-angle": 0,
+                    backgroundColor2: '#e6d2a9',
+                    lineColor: '#e6d2a9'
+                },
+                {
+                    text: 'Traditional Investing',
+                    values: investingData,
+                    backgroundColor1: '#F4E4C9',
+                    "gradient-colors": '#F9F8F6 #F4E4C9',
+                    "gradient-stops": '0.1 0.6',
+                    "fill-angle": 0,
+                    lineColor: '#f1e6d0'
+                }
+            ]
+        };
+
+        zingchart.render({
+            id: 'myChart',
+            data: chartConfig
+        });
+
+        zingchart.bind('myChart', 'mousemove', function(e) {
+
+            /*
+             * Returns array of information.
+             * xyInformation[0] -> scale-x info
+             * xyInformation[1] -> scale-y info
+             * xyInformation[2] -> node info
+             */
+            var xyInformation = zingchart.exec('myChart', 'getxyinfo', {
+                x: e.x,
+                y: e.y
+            });
+
+            // var year_id = (xyInformation[0].scaleidx / 12).toFixed(0);
+            //
+            // var to = Number(year_id) + 1;
+            //
+            // var manzil_data = 0;
+            // var traditional_investing = 0;
+            // var traditional_savings = 0;
+            //
+            // for( var i= year_id*12; i < to*12-1; i++ ){
+            //
+            //     manzil_data += manzilData[i];
+            //     traditional_investing += investingData[i];
+            //     traditional_savings += savingData[i];
+            // }
+            //
+            //
+            // manzil_data = manzil_data / 12 / 1.1;
+            // traditional_savings = traditional_savings / 12 / 1.05;
+            // traditional_investing = traditional_investing / 12 ;
+
+
+            $(".manzil_investing").text(formatDollar(Number(manzilData[xyInformation[0].scaleidx]/1.1)));
+            $(".traditional_investing").text(formatDollar(Number(savingData[xyInformation[0].scaleidx]/1.05)));
+            $(".traditional_savings").text(formatDollar(Number(investingData[xyInformation[0].scaleidx])));
+
+        });
+
+        zingchart.bind('myChart', 'mouseout', function(e) {
+            calcSection2();
+        });
+    }
+
+
+    function calcSection1(){
+        var manzil_rate = dataTable[term_value-1].manzil/100;
+        var traditional_rate = dataTable[term_value-1].traditional/100;
+        var private_rate = dataTable[term_value-1].private/100;
+
+        var borrowed_amount = price_value - payment_value;
+        var effective_manzil_rate = manzil_rate;
+        var effective_traditional_rate = ((1+traditional_rate/2)**2-1);
+        var effective_private_rate = ((1+private_rate/2)**2-1);
+
+        var payment_year = periodsTable.find(function(element){
+            return element.type == payment_type;
+        }).periods;
+
+        var manzil_financing_rate = ((1+effective_manzil_rate)**(1/payment_year))-1;
+        var traditional_interest_rate = ((1+effective_traditional_rate)**(1/payment_year))-1;
+        var private_interest_rate = ((1+effective_private_rate)**(1/payment_year))-1;
+
+        var total_payment_period = payment_year * term_value;
+
+        var manzil_payment = (borrowed_amount*manzil_financing_rate*(1+manzil_financing_rate)**total_payment_period)/((1+manzil_financing_rate)**total_payment_period-1);
+        var traditional_payment = (borrowed_amount*traditional_interest_rate*(1+traditional_interest_rate)**total_payment_period)/((1+traditional_interest_rate)**total_payment_period-1);
+        var private_payment = (borrowed_amount*private_interest_rate*(1+private_interest_rate)**total_payment_period)/((1+private_interest_rate)**total_payment_period-1);
+
+        var manzil_total_financing = (manzil_payment*total_payment_period)+(borrowed_amount*0.02);
+        var traditional_total_financing = (traditional_payment*total_payment_period);
+        var private_total_financing = (private_payment*total_payment_period);
+
+        $(".manzil_rate").text(formatPercent(manzil_rate.toString()));
+        $(".manzil_financing").text(formatDollar(manzil_total_financing));
+        $(".manzil_payment").text(formatDollar(manzil_payment));
+
+        $(".traditional_rate").text(formatPercent(traditional_rate.toString()));
+        $(".traditional_financing").text(formatDollar(traditional_total_financing));
+        $(".traditional_payment").text(formatDollar(traditional_payment));
+
+        $(".private_rate").text(formatPercent(private_rate.toString()));
+        $(".private_financing").text(formatDollar(private_total_financing));
+        $(".private_payment").text(formatDollar(private_payment));
+    }
+
+    function calcSection2(){
+        var manzil_future_value = FV( manzil_investing/deposit_per_year, years*deposit_per_year, (-1)*monthly_deposit, (-1)*initial_deposit, 1);
+        var traditional_investing_future_value = FV(traditional_investing/deposit_per_year, years*deposit_per_year, (-1)*monthly_deposit, (-1)*initial_deposit, 1);
+        var traditional_saving_future_value = FV(traditional_saving/deposit_per_year, years*deposit_per_year, (-1)*monthly_deposit, (-1)*initial_deposit, 1);
+
+        $(".manzil_investing").text(formatDollar(Number(manzil_future_value)));
+        $(".traditional_investing").text(formatDollar(Number(traditional_investing_future_value)));
+        $(".traditional_savings").text(formatDollar(Number(traditional_saving_future_value)));
+
+    }
+
+    drawGraph();
+
+    $(document).ready(function() {
+        setInterval(function () {
+           drawGraph();
+        }, 200);
+    });
+
+    // $("select.period").change(function(){
+    //     var selected = $(this).children("option:selected").text();
+    //     payment_type = selected;
+    //     deposit_per_year = periodsTable.find(function(element){
+    //         return element.type == payment_type;
+    //     }).periods;
+    //     calcSection1();
+    //     calcSection2();
+    // });
+
+    let slider_payment_range = document.getElementById('slider_payment_range');
+
+    noUiSlider.create(slider_payment_range, {
+        start: [100],
+        connect: [true, false],
+        range: {
+            'min': 0,
+            'max': 1000
+        },
+        step: 10,
+        format: {
+            from: function(value) {
+                return Math.round(+value);
+            },
+            to: function(value) {
+                return Math.round(+value);
+            }
+        }
+    });
+
+    slider_payment_range.noUiSlider.on('update', function (values, handle) {
+        payment_value = values*1000;
+        $(".payment_value").text(formatDollar(values*1000));
+        // $(".price_range").val( value * 5 ).change();
+        calcSection1();
+    });
+
+    let slider_price_range = document.getElementById('slider_price_range');
+
+    noUiSlider.create(slider_price_range, {
+        start: [50],
+        connect: [true, false],
+        range: {
+            'min': 0,
+            'max': 500
+        },
+        step: 1,
+        format: {
+            from: function(value) {
+                return Math.round(+value);
+            },
+            to: function(value) {
+                return Math.round(+value);
+            }
+        }
+    });
+
+    slider_price_range.noUiSlider.on('update', function (values, handle) {
+        price_value = values*10000;
+        $(".price_value").text(formatDollar(values*10000));
+        slider_payment_range.noUiSlider.set( price_value* 0.2 / 1000 );
+        calcSection1();
+    });
+
+
+
+    let slider_term_range = document.getElementById('slider_term_range');
+
+    noUiSlider.create(slider_term_range, {
+        start: [25],
+        connect: [true, false],
+        range: {
+            'min': 1,
+            'max': 25
+        },
+        step: 1,
+        format: {
+            from: function(value) {
+                return Math.round(+value);
+            },
+            to: function(value) {
+                return Math.round(+value);
+            }
+        }
+    });
+
+    slider_term_range.noUiSlider.on('update', function (values, handle) {
+        term_value = values;
+        $(".term_value").text(values.toString() + " Years");
+        calcSection1();
+    });
+
+    let slider_initial_range = document.getElementById('slider_initial_range');
+
+    noUiSlider.create(slider_initial_range, {
+        start: [100],
+        connect: [true, false],
+        range: {
+            'min': 1,
+            'max': 2000
+        },
+        step: 1,
+        format: {
+            from: function(value) {
+                return Math.round(+value);
+            },
+            to: function(value) {
+                return Math.round(+value);
+            }
+        }
+    });
+
+    slider_initial_range.noUiSlider.on('update', function (values, handle) {
+        initial_deposit = values*500;
+        $(".initial_value").text(formatDollar(values*500));
+        calcSection2();
+    });
+
+    let slider_monthly_range = document.getElementById('slider_monthly_range');
+
+    noUiSlider.create(slider_monthly_range, {
+        start: [40],
+        connect: [true, false],
+        range: {
+            'min': 1,
+            'max': 1000
+        },
+        step: 1,
+        format: {
+            from: function(value) {
+                return Math.round(+value);
+            },
+            to: function(value) {
+                return Math.round(+value);
+            }
+        }
+    });
+
+    slider_monthly_range.noUiSlider.on('update', function (values, handle) {
+        monthly_deposit = values*25;
+        $(".monthly_value").text(formatDollar(values*25));
+        calcSection2();
+    });
+
+    let slider_payment_frequency = document.getElementById('slider_payment_frequency');
+
+    noUiSlider.create(slider_payment_frequency, {
+        start: [1],
+        connect: [true, false],
+        range: {
+            'min': 1,
+            'max': 4
+        },
+        step: 1,
+        format: {
+            from: function(value) {
+                return Math.round(+value);
+            },
+            to: function(value) {
+                return Math.round(+value);
+            }
+        }
+    });
+
+    slider_payment_frequency.noUiSlider.on('update', function (values, handle) {
+
+        if( values == 1 ){
+            $(".payment_frequency").text("Monthly");
+            $(".payment_type_label").text("(Monthly Payment)");
+        }
+        else if( values == 2 ){
+            $(".payment_frequency").text("Semi-Monthly");
+            $(".payment_type_label").text("(Semi-Monthly Payment)");
+        }
+        else if( values == 3 ){
+            $(".payment_frequency").text("Bi-Weekly");
+            $(".payment_type_label").text("(Bi-Weekly Payment)");
+        }
+        else if( values == 4 ){
+            $(".payment_frequency").text("Weekly");
+            $(".payment_type_label").text("(Weekly Payment)");
+        }
+
+        payment_type = $(".payment_frequency").text();
+
+        deposit_per_year = periodsTable.find(function(element){
+            return element.type == payment_type;
+        }).periods;
+
+
+        calcSection1();
+        calcSection2();
+    });
+
+
+    $("#initial-field").on({
+        keyup: function(e) {
+
+            var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+            if( value < 500 && value > 1000000 ){
+                return;
+            }
+
+            if(e.which == 13) {
+                $(".initial_value").css("display", "block");
+                $("#initial-field").css("display", "none");
+                $(".initial_value").text( $("#initial-field").val() );
+                slider_initial_range.noUiSlider.set( (value/500).toString() );
+            }
+
+            formatCurrency($(this));
+        },
+        blur: function() {
+            formatCurrency($(this), "blur");
+        }
+    });
+
+    $("#monthly-field").on({
+
+        keyup: function(e) {
+
+            var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+            if( value < 25 && value > 25000 ){
+                return;
+            }
+
+            if(e.which == 13) {
+                $(".monthly_value").css("display", "block");
+                $("#monthly-field").css("display", "none");
+                $(".monthly_value").text( $("#monthly-field").val() );
+                slider_monthly_range.noUiSlider.set( (value/25).toString() );
+            }
+
+            formatCurrency($(this));
+        },
+        blur: function() {
+            formatCurrency($(this), "blur");
+        }
+    });
+
+    $("#purchase-field").on({
+
+        keyup: function(e) {
+
+            var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+            if( value < 0 && value > 5000000 ){
+                return;
+            }
+
+            if(e.which == 13) {
+                $(".price_value").css("display", "block");
+                $("#purchase-field").css("display", "none");
+                $(".price_value").text( $("#purchase-field").val() );
+                slider_price_range.noUiSlider.set( (value/10000).toString() );
+            }
+
+            formatCurrency($(this));
+        },
+        blur: function() {
+            formatCurrency($(this), "blur");
+        }
+    });
+
+    $("#down-field").on({
+
+        keyup: function(e) {
+
+            var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+
+            if( value < 0 && value > 100000 ){
+                return;
+            }
+
+            if(e.which == 13) {
+                $(".payment_value").css("display", "block");
+                $("#down-field").css("display", "none");
+                $(".payment_value").text( $("#down-field").val() );
+                slider_payment_range.noUiSlider.set( (value/1000).toString() );
+            }
+
+            formatCurrency($(this));
+        },
+        blur: function() {
+            formatCurrency($(this), "blur");
+        }
+    });
+
+
+    function formatNumber(n) {
+        // format number 1000000 to 1,234,567
+        return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+
+
+    function formatCurrency(input, blur) {
+        // appends $ to value, validates decimal side
+        // and puts cursor back in right position.
+
+        // get input value
+        var input_val = input.val();
+
+        // don't validate empty input
+        if (input_val === "") { return; }
+
+        // original length
+        var original_len = input_val.length;
+
+        // initial caret position
+        var caret_pos = input.prop("selectionStart");
+
+        // check for decimal
+        if (input_val.indexOf(".") >= 0) {
+
+            // get position of first decimal
+            // this prevents multiple decimals from
+            // being entered
+            var decimal_pos = input_val.indexOf(".");
+
+            // split number by decimal point
+            var left_side = input_val.substring(0, decimal_pos);
+            var right_side = input_val.substring(decimal_pos);
+
+            // add commas to left side of number
+            left_side = formatNumber(left_side);
+
+            // validate right side
+            right_side = formatNumber(right_side);
+
+            // On blur make sure 2 numbers after decimal
+            if (blur === "blur") {
+                right_side += "00";
+            }
+
+            // Limit decimal to only 2 digits
+            right_side = right_side.substring(0, 0);
+
+            // join number by .
+            input_val = "$" + left_side;
+
+        } else {
+            // no decimal entered
+            // add commas to number
+            // remove all non-digits
+            input_val = formatNumber(input_val);
+            input_val = "$" + input_val;
+
+            // final formatting
+            if (blur === "blur") {
+                // input_val += ".00";
+            }
+        }
+
+        // send updated string to input
+        input.val(input_val);
+
+        // put caret back in the right position
+        var updated_len = input_val.length;
+        caret_pos = updated_len - original_len + caret_pos;
+        input[0].setSelectionRange(caret_pos, caret_pos);
+    }
+
+    $(".initial_value").click(function(e){
+        $("#initial-field").css("display", "block");
+        $(".initial_value").css("display", "none");
+        $("#initial-field").val($(".initial_value").text());
+        $("#initial-field").focus();
+        $("#initial-field").select();
+    });
+
+    $(".monthly_value").click(function(e){
+        $("#monthly-field").css("display", "block");
+        $(".monthly_value").css("display", "none");
+        $("#monthly-field").val($(".monthly_value").text());
+        $("#monthly-field").focus();
+        $("#monthly-field").select();
+    });
+
+    $(".price_value").click(function(e){
+        $("#purchase-field").css("display", "block");
+        $(".price_value").css("display", "none");
+        $("#purchase-field").val($(".price_value").text());
+        $("#purchase-field").focus();
+        $("#purchase-field").select();
+    });
+
+    $(".payment_value").click(function(e){
+        $("#down-field").css("display", "block");
+        $(".payment_value").css("display", "none");
+        $("#down-field").val($(".payment_value").text());
+        $("#down-field").focus();
+        $("#down-field").select();
+    });
+
+
+    $("#monthly-field").blur(function (e) {
+
+        var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+        $(".monthly_value").css("display", "block");
+        $("#monthly-field").css("display", "none");
+
+        if($("#monthly-field").val()!=""){
+            $(".monthly_value").text( $("#monthly-field").val() );
+            slider_monthly_range.noUiSlider.set( (value/25).toString() );
+        }
+    });
+
+    $("#initial-field").blur(function(e){
+
+        var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+        $(".initial_value").css("display", "block");
+        $("#initial-field").css("display", "none");
+        if($("#monthly-field").val()!=""){
+            $(".initial_value").text( $("#initial-field").val() );
+            slider_initial_range.noUiSlider.set( (value/500).toString() );
+        }
+    });
+
+    $("#purchase-field").blur(function(e){
+
+        var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+        $(".price_value").css("display", "block");
+        $("#purchase-field").css("display", "none");
+        if($("#purchase-field").val()!=""){
+            $(".price_value").text( $("#purchase-field").val() );
+            slider_price_range.noUiSlider.set( (value/10000).toString() );
+        }
+    });
+
+    $("#down-field").blur(function(e){
+
+        var value = Number($(this).val().replace(/[^0-9.-]+/g,""));
+        $(".payment_value").css("display", "block");
+        $("#down-field").css("display", "none");
+        if($("#down-field").val()!=""){
+            $(".payment_value").text( $("#down-field").val() );
+            slider_payment_range.noUiSlider.set( (value/1000).toString() );
+        }
+    });
+</script>
+</html>
